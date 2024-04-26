@@ -1,0 +1,2 @@
+# betterscratch.github.io
+website
