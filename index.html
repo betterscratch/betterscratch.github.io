@@ -15,10 +15,15 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            z-index: 10;
             background-color: #855CD6;
             padding-left: 18%;
+            padding-right: 18%;
+            width: 100%;
             border-bottom: 1px solid rgba(0, 0, 0, .1);
-            box-shadow: 0 0 3px rgba(0, 0, 0, .25);
+            box-shadow: 0 1 3px rgba(0, 0, 0, .25);
+            position: fixed;
+            top: 0;
         }
 
         a {
@@ -69,10 +74,11 @@
         #info {
             background-color: #855cd6;
             height: 18rem;
-            margin-top: -21px;
             padding-left: calc(18% + 5px);
             padding-top: 5rem;
             color: white;
+            z-index: -10;
+            margin-top: 55px;
         }
 
         #gridbutton {
@@ -92,21 +98,88 @@
             vertical-align: -0.35rem;
             content: "";
         }
+
+        #footer {
+            display: block;
+            background-color: #f2f2f2;
+            padding: 10px 0;
+            color: #575e75;
+            font-size: .85rem;
+            text-align: center;
+            width: 100%;
+            padding-bottom: 2.5rem;
+            padding-top: 1rem;
+        }
+
+        #footer .lists span {
+            font-weight: bold;
+        }
+        #footer .lists {
+            display: inline-block;
+            text-align:left;
+        }
+
+        #footer .lists a span {
+            font-weight: normal;
+            font-weight: 400;
+            color: #7854c0;
+        }
+
+        #content h1 {
+            font-size: 2rem;
+            margin-left: 18%;
+            line-height: 1.7em;
+            color: #575e75;
+        }
     </style>
 </head>
 
 <body>
 
     <ul>
-        <li><a href="./home.html" class="active"></a></li>
-        <li><a href="./editor.html">Try Online!</a></li>
+        <li><a href="./index.html" class="active"></a></li>
+        <li><a href="./web/editor.html">Try Online!</a></li>
         <li><a href="./download.html" style="float:right;">Download</a></li>
     </ul>
     <div id="info">
-        <h1>Create programs, more advanced than ever!<br><br><a href='./editor.html' id="gridbutton"><img
-                    src='create.svg'>Start Creating!</a><a href='./editor.html' id="gridbutton">Download</a></h1>
+        <h1>Create programs and games that are <br> more advanced than any other!<br><br><a href='./web/editor.html'
+                id="gridbutton"><img src='create.svg'>Start Creating!</a><a href='./download.html'
+                id="gridbutton">Download</a></h1>
     </div>
-
+    <div style="background-color: #EDF4FF;height:50px;text-align:center;"><a href='why.html' style="margin: .625rem .5rem;
+        padding: .5rem 1.5rem;
+        border-radius: 1.5rem;display: inline-block;
+  border: 0;
+  background-color: #855cd6;
+  cursor: pointer;
+  color: #fff;
+  font-size: .8rem;
+  font-weight: bold;">Why Better Scratch?</a></div>
+    <div id="content">
+        <!--Come back soon!-->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <div id="footer">
+        <div class="lists">
+            <span>Links</span>
+            <br>
+            <a href="download.html"><span>Download</span></a>
+        </div>
+        <br>
+            <br>
+        <span>Better Scratch is not affiliated with Scratch, MIT, LLK, or TurboWarp.</span>
+    </div>
 </body>
 
 </html>
