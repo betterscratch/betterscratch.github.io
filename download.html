@@ -73,7 +73,7 @@
 
         #info {
             background-color: #855cd6;
-            height: 18rem;
+            height: 23rem;
             padding-left: calc(18% + 5px);
             padding-top: 2rem;
             color: white;
@@ -114,9 +114,10 @@
         #footer .lists span {
             font-weight: bold;
         }
+
         #footer .lists {
             display: inline-block;
-            text-align:left;
+            text-align: left;
         }
 
         #footer .lists a span {
@@ -125,13 +126,107 @@
             color: #7854c0;
         }
 
+        .tab {
+            padding-left: 18%;
+            padding-right: 18%;
+            width: calc(100%-36%);
+        }
+
         #content h1 {
             font-size: 2rem;
             margin-left: 18%;
             line-height: 1.7em;
             color: #575e75;
         }
+
+        .tab {
+            overflow: hidden;
+            background-color: #ffffff;
+            box-shadow: 0 0 3px rgba(0, 0, 0, .25);
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            float: left;
+            margin-right: 1rem;
+            border: none;
+            border-radius: 1.6rem;
+            background-color: rgba(0, 0, 0, .1);
+            padding: .5rem 1.1rem;
+            align-items: center;
+            box-sizing: border-box;
+            color: white;
+            font-size: .8rem;
+            font-weight: bold;
+        }
+
+        .tab button:hover {
+            cursor: pointer;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.activetab {
+            background-color: #855cd6;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            margin-left: 18%;
+            margin-right: 18%;
+            width: calc(100%-36%);
+            border-top: none;
+        }
+
+        .tabcontent h3 {
+            font-size: 2rem;
+            line-height: 1.7em;
+            color: #575e75;
+            font-weight: bold;
+        }
+
+        .tabcontent a {
+            color: #7854c0;
+            font-weight: bold;
+        }
+
+        .step-number {
+            display: inline-flex;
+            border-radius: 2rem;
+            background-color: #855cd6;
+            width: 2rem;
+            height: 2rem;
+            color: #fff;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
     </style>
+    <script>
+        function openTab(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" activetab", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " activetab";
+        } 
+    </script>
 </head>
 
 <body>
@@ -142,33 +237,62 @@
         <li><a href="./download.html" style="float:right;">Download</a></li>
     </ul>
     <div id="info">
-        <div style="width:600px;display: flex;align-items:center;"><img src='icon.png' style="width:40px;height:40px;order:1;float: left;"><br><h1 style="font-size:2rem;line-height: 1.7em;order:2;float:right;padding-left:10px;">Download the Better Scratch App</h1>
+        <div style="width:600px;display: flex;align-items:center;"><img src='icon.png'
+                style="width:40px;height:40px;order:1;float: left;"><br>
+            <h1 style="font-size:2rem;line-height: 1.7em;order:2;float:right;padding-left:10px;">Download the Better
+                Scratch App</h1>
+        </div>
+        <p style="line-height: 1.7rem;font-size: 1.2rem;">Would you like to create and save Better Scratch projects
+            without<br> an internet connection? Download the free Better Scratch app.</p>
+        <br>
+        <br>
+        <p style="font-weight: 500;">Requirements</p>
+        <div>
+            <span style="display: flex;align-items:center;margin-top:-5px;width:150px;float:left;">
+                <img src='windows.svg' style="margin-top:-5px;">
+                <p style="padding-left:5px;">Windows 10+</p>
+            </span><span style="display: flex;align-items:center;margin-top:-5px;width:75px; float:left;">
+                <img src='linux.svg' style="margin-top:-5px;filter:invert(100%);width:18px;height:18px;">
+                <p style="padding-left:5px;">Linux</p>
+            </span>
+
+
         </div>
     </div>
-    <div style="background-color: #EDF4FF;height:50px;text-align:center;"><a href='why.html' style="margin: .625rem .5rem;
-        padding: .5rem 1.5rem;
-        border-radius: 1.5rem;display: inline-block;
-  border: 0;
-  background-color: #855cd6;
-  cursor: pointer;
-  color: #fff;
-  font-size: .8rem;
-  font-weight: bold;">Why Better Scratch?</a></div>
+
     <div id="content">
-        <!--Come back soon!-->
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'win')" id="defaultOpen">Windows</button>
+            <button class="tablinks" onclick="openTab(event, 'deb')">Linux (Debian)</button>
+            <button class="tablinks" onclick="openTab(event, 'uni')">Linux (Other)</button>
+        </div>
+
+        <div id="win" class="tabcontent">
+            <h3>Windows</h3>
+            <div class="step-number">1</div style="align-items: flex-start;">
+            <div>
+            <p><a href="https://github.com/betterscratch/desktop/releases/download/1.3/Better.Scratch.Setup.1.3.0.exe">Download
+                    now!</a></p>
+        </div></div>
+
+        <div id="deb" class="tabcontent">
+            <h3>Linux (.deb)</h3>
+            <div class="step-number">1</div><div style="align-items: flex-start;">
+            <p><a
+                    href="https://github.com/betterscratch/desktop/releases/download/1.3/Better.Scratch-linux-amd64-1.3.0.deb">Download
+                    now!</a></p></div>
+        </div>
+
+        <div id="uni" class="tabcontent">
+            <h3>Linux (.appimage)</h3>
+            <div class="step-number">1</div><div style="align-items: flex-start;">
+            <p><a
+                    href="https://github.com/betterscratch/desktop/releases/download/1.3/Better.Scratch-linux-x86_64-1.3.0.AppImage">Download
+                    now!</a></p></div>
+        </div>
     </div>
+    <br>
+    <br>
     <div id="footer">
         <div class="lists">
             <span>Links</span>
@@ -176,9 +300,13 @@
             <a href="download.html"><span>Download</span></a>
         </div>
         <br>
-            <br>
+        <br>
         <span>Better Scratch is not affiliated with Scratch, MIT, LLK, or TurboWarp.</span>
     </div>
 </body>
+
+<script>
+    document.getElementById("defaultOpen").click();
+</script>
 
 </html>
