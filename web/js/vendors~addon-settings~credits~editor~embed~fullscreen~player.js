@@ -33693,9 +33693,47 @@ const guiColors = {
   'looks-secondary': 'hsla(260, 60%, 60%, 1)',
   'looks-transparent': 'hsla(260, 60%, 60%, 0.35)',
   'looks-light-transparent': 'hsla(260, 60%, 60%, 0.15)',
-  'looks-secondary-dark': 'hsla(260, 42%, 51%, 1)'
+  'looks-secondary-dark': 'hsla(260, 42%, 51%, 1)',
+  'drop-highlight': '#a600ff'
 };
-const blockColors = {};
+const blockColors = {
+  checkboxActiveBackground: 'hsla(260, 60%, 60%, 1)',
+  checkboxActiveBorder: 'hsla(260, 42%, 51%, 1)'
+};
+
+
+/***/ }),
+
+/***/ "./src/lib/themes/accent/rainbow.js":
+/*!******************************************!*\
+  !*** ./src/lib/themes/accent/rainbow.js ***!
+  \******************************************/
+/*! exports provided: guiColors, blockColors */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "guiColors", function() { return guiColors; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "blockColors", function() { return blockColors; });
+const guiColors = {
+  'motion-primary': 'hsla(260, 60%, 60%, 1)',
+  'motion-primary-transparent': 'hsla(260, 60%, 60%, 0.9)',
+  'motion-tertiary': 'hsla(260, 42%, 51%, 1)',
+  'looks-secondary': 'hsla(260, 60%, 60%, 1)',
+  'looks-transparent': 'hsla(260, 60%, 60%, 0.35)',
+  'looks-light-transparent': 'hsla(260, 60%, 60%, 0.15)',
+  'looks-secondary-dark': 'hsla(260, 42%, 51%, 1)',
+  'extensions-primary': 'hsla(10, 85%, 65%, 1)',
+  'extensions-tertiary': 'hsla(10, 85%, 40%, 1)',
+  'extensions-transparent': 'hsla(10, 85%, 65%, 0.35)',
+  'extensions-light': 'hsla(10, 57%, 85%, 1)',
+  'drop-highlight': '#a600ff',
+  'menu-bar-background-image': 'linear-gradient(90deg, rgba(255, 0, 0, 0.75) 0%, rgba(255, 154, 0, 0.75) 10%, rgba(208, 222, 33, 0.75) 20%, rgba(79, 220, 74, 0.75) 30%, rgba(63, 218, 216, 0.75) 40%, rgba(47, 201, 226, 0.75) 50%, rgba(28, 127, 238, 0.75) 60%, rgba(95, 21, 242, 0.75) 70%, rgba(186, 12, 248, 0.75) 80%, rgba(251, 7, 217, 0.75) 90%, rgba(255, 0, 0, 0.75) 100%)'
+};
+const blockColors = {
+  checkboxActiveBackground: 'hsla(260, 60%, 60%, 1)',
+  checkboxActiveBorder: 'hsla(260, 42%, 51%, 1)'
+};
 
 
 /***/ }),
@@ -33842,6 +33880,229 @@ const customExtensionColors = {
 
 /***/ }),
 
+/***/ "./src/lib/themes/blocks/high-contrast-media/extensions/musicIcon.svg":
+/*!****************************************************************************!*\
+  !*** ./src/lib/themes/blocks/high-contrast-media/extensions/musicIcon.svg ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI2LjQzMzggMzBDMjkuNTEzIDMwIDMxLjYzNjYgMjguMTU2OSAzMS4xNzkgMjUuODc0QzI4LjI5OTQgMTMuMDQzNiAyNy40MjU2IDkuODUxMzQgMjcuOTQ1NCA5LjYwNTQ3QzI4LjMxMjUgOS40MzE4MyAyOS4zNzQ2IDEwLjcyNzYgMzAuOTE2MiAxMS4xMzU5QzM0LjY0MTYgMTIuMTEyNiA0MC4yNzQyIDYuNDA3NTEgMzQuNTY1NSA3LjI5MTg2QzMyLjMyMjQgNy42MzkgMzAuMTU4NyA2LjIzODM2IDI4LjQ4NzkgNS4xNTY3OUMyNS45MDcyIDMuNDg2MiAyNC41MDI0IDIuNTc2ODQgMjUuNzk3NCAxMC4wNDUxQzI2LjQzNDkgMTMuNzAzNSAyNi45Njk3IDE2LjMyMzEgMjcuMzQ3NSAxOC4xNzM5QzI3Ljk5NTcgMjEuMzQ5NCAyOC4xODE5IDIyLjI2MTYgMjcuNjMyNSAyMi4yNzQxQzI3LjMzMjEgMjIuMTUyIDI3LjAzMjcgMjIuMDU3OCAyNi42OTU3IDIxLjk3MjRDMjYuMDg4IDIxLjgyMjUgMjUuNDUxNiAyMS43MzgyIDI0LjgwNTMgMjEuNzM4MkMyMS43MjcxIDIxLjczODIgMTkuNjAzNiAyMy41ODkyIDIwLjA2MjEgMjUuODc0QzIwLjUxMDcgMjguMTU2OSAyMy4zNjQ2IDMwIDI2LjQzMzggMzBaIiBmaWxsPSJibGFjayIvPgo8cGF0aCBkPSJNOS40Mzg2MSAzNi4wMDAxQzEyLjUwNjUgMzYuMDAwMSAxNC42MzAyIDM0LjE0OCAxNC4xODE3IDMxLjg2NDJDMTEuMzAzMiAxOS4wMzM2IDEwLjQyOTkgMTUuODQxNiAxMC45NDk2IDE1LjU5NThDMTEuMzE2NiAxNS40MjIyIDEyLjM3ODMgMTYuNzE3NyAxMy45MTkgMTcuMTI2QzE3LjY0MjggMTguMTEzNiAyMy4yNzI5IDEyLjM5ODUgMTcuNTY2NyAxMy4yOTE4QzE1LjMyNDggMTMuNjM4NiAxMy4xNjIzIDEyLjIzODIgMTEuNDkyMiAxMS4xNTY5QzguOTEyMzcgOS40ODYzNiA3LjUwNzk3IDguNTc2OTggOC44MDI1MSAxNi4wNDUxQzkuNDQyOTQgMTkuNzI4NiA5Ljk3OTggMjIuMzU5NCAxMC4zNTggMjQuMjEyNUMxMC45OTEyIDI3LjMxNTQgMTEuMTc5NSAyOC4yMzg0IDEwLjY2NDQgMjguMjczMkM5Ljc4NDMyIDI3LjkyNTggOC44MTIzOSAyNy43MjkzIDcuODEwODIgMjcuNzI5M0M0LjczNCAyNy43MjkzIDIuNjExMzQgMjkuNTgwNCAzLjA1OTc4IDMxLjg2NDJDMy41MTgwOSAzNC4xNDggNi4zNzA2OSAzNi4wMDAxIDkuNDM4NjEgMzYuMDAwMVoiIGZpbGw9ImJsYWNrIi8+Cjwvc3ZnPgo="
+
+/***/ }),
+
+/***/ "./src/lib/themes/blocks/high-contrast-media/extensions/penIcon.svg":
+/*!**************************************************************************!*\
+  !*** ./src/lib/themes/blocks/high-contrast-media/extensions/penIcon.svg ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/assets/b631383707e87a454b479dedaa8ca014.svg";
+
+/***/ }),
+
+/***/ "./src/lib/themes/blocks/high-contrast-media/extensions/text2speechIcon.svg":
+/*!**********************************************************************************!*\
+  !*** ./src/lib/themes/blocks/high-contrast-media/extensions/text2speechIcon.svg ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDIxLjY2OTNWMzQuMjgzNEMxNiAzNS44MTUxIDE0IDM2LjUzNTkgMTIuOCAzNS41NDQ4TDEwLjIgMzMuMzgyNEM5LjIgMzIuNTcxNSA4IDMyLjIxMTEgNi43IDMyLjIxMTFINi4zQzUgMzIuMjExMSA0IDMxLjMxMDEgNCAzMC4xMzg4VjI1LjkwNDFDNCAyNC43MzI4IDUgMjMuODMxOCA2LjMgMjMuODMxOEg2LjdDOCAyMy44MzE4IDkuMiAyMy4zODEzIDEwLjEgMjIuNjYwNEwxMi44IDIwLjQ5OEMxNCAxOS40MTY4IDE2IDIwLjIyNzcgMTYgMjEuNjY5M1oiIGZpbGw9ImJsYWNrIi8+CjxwYXRoIGQ9Ik0yNCA0QzE5LjU4MTcgNCAxNiA3LjU4MTcyIDE2IDEyQzE2IDE1LjExNDcgMTcuNzc5OSAxNy44MTM2IDIwLjM3ODEgMTkuMTM1MUMyMC4yMDk1IDIwLjkwODcgMTkuNjU2NCAyMS42NjU1IDE5LjMwNDIgMjIuMTQ3M0MxOS4xMjY1IDIyLjM5MDQgMTkgMjIuNTYzNSAxOSAyMi43NjE5QzE5IDIzLjQyODYgMTkuNjY2NyAyMy40Mjg2IDE5LjY2NjcgMjMuNDI4NkMyMC42MTMyIDIzLjQyODYgMjMuNTgxMyAyMi4yNjIzIDI1LjQwOTcgMjBIMjhDMzIuNDE4MyAyMCAzNiAxNi40MTgzIDM2IDEyQzM2IDcuNTgxNzIgMzIuNDE4MyA0IDI4IDRIMjRaIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMEI4RTY5Ii8+Cjwvc3ZnPgo="
+
+/***/ }),
+
+/***/ "./src/lib/themes/blocks/high-contrast-media/extensions/translateIcon.svg":
+/*!********************************************************************************!*\
+  !*** ./src/lib/themes/blocks/high-contrast-media/extensions/translateIcon.svg ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/assets/ef4a998a82a8567de018baa4607bc6a0.svg";
+
+/***/ }),
+
+/***/ "./src/lib/themes/blocks/high-contrast-media/extensions/videoSensingIcon.svg":
+/*!***********************************************************************************!*\
+  !*** ./src/lib/themes/blocks/high-contrast-media/extensions/videoSensingIcon.svg ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBvcGFjaXR5PSIwLjI1IiBjeD0iMzIiIGN5PSIyNiIgcj0iNCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzBCOEU2OSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxjaXJjbGUgb3BhY2l0eT0iMC41IiBjeD0iMzIiIGN5PSIyMiIgcj0iNCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzBCOEU2OSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxjaXJjbGUgb3BhY2l0eT0iMC43NSIgY3g9IjMyIiBjeT0iMTgiIHI9IjQiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMwQjhFNjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8Y2lyY2xlIGN4PSIzMiIgY3k9IjE0IiByPSI0IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMEI4RTY5IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTE3IDE3LjVMMjIuNCAxNEMyMi45IDEzLjcgMjMuNSAxMy44IDIzLjggMTQuM0MyMy45IDE0LjUgMjQgMTQuNyAyNCAxNC44VjI1LjFDMjQgMjUuNyAyMy41IDI2LjEgMjMgMjYuMUMyMi44IDI2LjEgMjIuNiAyNiAyMi41IDI1LjlMMTcgMjIuNlYyNEMxNyAyNi4yIDE1LjIgMjguMSAxMyAyOC4xSDQuMUMxLjggMjggMCAyNi4yIDAgMjRWMTYuMUMwIDEzLjggMS44IDEyIDQuMSAxMkgxM0MxNS4yIDEyIDE3IDEzLjggMTcgMTYuMVYxNy41WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg=="
+
+/***/ }),
+
+/***/ "./src/lib/themes/blocks/high-contrast.js":
+/*!************************************************!*\
+  !*** ./src/lib/themes/blocks/high-contrast.js ***!
+  \************************************************/
+/*! exports provided: blockColors, extensions, customExtensionColors */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "blockColors", function() { return blockColors; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "extensions", function() { return extensions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "customExtensionColors", function() { return customExtensionColors; });
+/* harmony import */ var _high_contrast_media_extensions_musicIcon_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./high-contrast-media/extensions/musicIcon.svg */ "./src/lib/themes/blocks/high-contrast-media/extensions/musicIcon.svg");
+/* harmony import */ var _high_contrast_media_extensions_musicIcon_svg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_high_contrast_media_extensions_musicIcon_svg__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _high_contrast_media_extensions_penIcon_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./high-contrast-media/extensions/penIcon.svg */ "./src/lib/themes/blocks/high-contrast-media/extensions/penIcon.svg");
+/* harmony import */ var _high_contrast_media_extensions_penIcon_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_high_contrast_media_extensions_penIcon_svg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _high_contrast_media_extensions_text2speechIcon_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./high-contrast-media/extensions/text2speechIcon.svg */ "./src/lib/themes/blocks/high-contrast-media/extensions/text2speechIcon.svg");
+/* harmony import */ var _high_contrast_media_extensions_text2speechIcon_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_high_contrast_media_extensions_text2speechIcon_svg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _high_contrast_media_extensions_translateIcon_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./high-contrast-media/extensions/translateIcon.svg */ "./src/lib/themes/blocks/high-contrast-media/extensions/translateIcon.svg");
+/* harmony import */ var _high_contrast_media_extensions_translateIcon_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_high_contrast_media_extensions_translateIcon_svg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _high_contrast_media_extensions_videoSensingIcon_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./high-contrast-media/extensions/videoSensingIcon.svg */ "./src/lib/themes/blocks/high-contrast-media/extensions/videoSensingIcon.svg");
+/* harmony import */ var _high_contrast_media_extensions_videoSensingIcon_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_high_contrast_media_extensions_videoSensingIcon_svg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _tw_color_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../tw-color-utils */ "./src/lib/tw-color-utils.js");
+
+
+
+
+
+
+const blockColors = {
+  motion: {
+    primary: '#80B5FF',
+    secondary: '#B3D2FF',
+    tertiary: '#3373CC',
+    quaternary: '#CCE1FF'
+  },
+  looks: {
+    primary: '#CCB3FF',
+    secondary: '#DDCCFF',
+    tertiary: '#774DCB',
+    quaternary: '#EEE5FF'
+  },
+  sounds: {
+    primary: '#E19DE1',
+    secondary: '#FFB3FF',
+    tertiary: '#BD42BD',
+    quaternary: '#FFCCFF'
+  },
+  control: {
+    primary: '#FFBE4C',
+    secondary: '#FFDA99',
+    tertiary: '#CF8B17',
+    quaternary: '#FFE3B3'
+  },
+  event: {
+    primary: '#FFD966',
+    secondary: '#FFECB3',
+    tertiary: '#CC9900',
+    quaternary: '#FFF2CC'
+  },
+  sensing: {
+    primary: '#85C4E0',
+    secondary: '#AED8EA',
+    tertiary: '#2E8EB8',
+    quaternary: '#C2E2F0'
+  },
+  pen: {
+    primary: '#13ECAF',
+    secondary: '#75F0CD',
+    tertiary: '#0B8E69',
+    quaternary: '#A3F5DE'
+  },
+  operators: {
+    primary: '#7ECE7E',
+    secondary: '#B5E3B5',
+    tertiary: '#389438',
+    quaternary: '#DAF1DA'
+  },
+  data: {
+    primary: '#FFA54C',
+    secondary: '#FFCC99',
+    tertiary: '#DB6E00',
+    quaternary: '#FFE5CC'
+  },
+  // This is not a new category, but rather for differentiation
+  // between lists and scalar variables.
+  data_lists: {
+    primary: '#FF9966',
+    secondary: '#FFCAB0',
+    // I don't think this is used, b/c we don't have any droppable fields in list blocks
+    tertiary: '#E64D00',
+    quaternary: '#FFDDCC'
+  },
+  more: {
+    primary: '#FF99AA',
+    secondary: '#FFCCD5',
+    tertiary: '#FF3355',
+    quaternary: '#FFE5EA'
+  },
+  addons: {
+    primary: '#34e4d0',
+    secondary: '#71e2d5',
+    tertiary: '#29b2a2',
+    quaternary: '#9ee2db'
+  },
+  text: '#000000',
+  textFieldText: '#000000',
+  // Text inside of inputs e.g. 90 in [point in direction (90)]
+  toolboxText: '#000000',
+  // Toolbox text, color picker text (used to be #575E75)
+  blackText: '#000000',
+  // The color that the category menu label (e.g. 'motion', 'looks', etc.) changes to on hover
+  toolboxHover: '#3373CC',
+  insertionMarker: '#000000',
+  insertionMarkerOpacity: 0.2,
+  fieldShadow: 'rgba(255, 255, 255, 0.3)',
+  dragShadowOpacity: 0.6,
+  menuHover: 'rgba(255, 255, 255, 0.3)'
+};
+const extensions = {
+  music: {
+    blockIconURI: _high_contrast_media_extensions_musicIcon_svg__WEBPACK_IMPORTED_MODULE_0___default.a
+  },
+  pen: {
+    blockIconURI: _high_contrast_media_extensions_penIcon_svg__WEBPACK_IMPORTED_MODULE_1___default.a
+  },
+  text2speech: {
+    blockIconURI: _high_contrast_media_extensions_text2speechIcon_svg__WEBPACK_IMPORTED_MODULE_2___default.a
+  },
+  translate: {
+    blockIconURI: _high_contrast_media_extensions_translateIcon_svg__WEBPACK_IMPORTED_MODULE_3___default.a
+  },
+  videoSensing: {
+    blockIconURI: _high_contrast_media_extensions_videoSensingIcon_svg__WEBPACK_IMPORTED_MODULE_4___default.a
+  }
+};
+const clamp = (value, lower, upper) => Math.max(lower, Math.min(upper, value));
+const customExtensionColors = {
+  primary: _primary => {
+    const hsv = Object(_tw_color_utils__WEBPACK_IMPORTED_MODULE_5__["hex2hsv"])(_primary);
+    hsv[1] = clamp(hsv[1] - 20, 0, 50);
+    hsv[2] = clamp(hsv[2] + 20, 80, 100);
+    return Object(_tw_color_utils__WEBPACK_IMPORTED_MODULE_5__["hsv2hex"])(hsv);
+  },
+  secondary: primary => {
+    const hsv = Object(_tw_color_utils__WEBPACK_IMPORTED_MODULE_5__["hex2hsv"])(primary);
+    hsv[1] = clamp(hsv[1] - 40, 0, 50);
+    hsv[2] = clamp(hsv[2] + 20, 80, 100);
+    return Object(_tw_color_utils__WEBPACK_IMPORTED_MODULE_5__["hsv2hex"])(hsv);
+  },
+  tertiary: primary => {
+    const hsv = Object(_tw_color_utils__WEBPACK_IMPORTED_MODULE_5__["hex2hsv"])(primary);
+    hsv[2] = clamp(hsv[2] - 20, 0, 100);
+    return Object(_tw_color_utils__WEBPACK_IMPORTED_MODULE_5__["hsv2hex"])(hsv);
+  },
+  quaternary: primary => {
+    const hsv = Object(_tw_color_utils__WEBPACK_IMPORTED_MODULE_5__["hex2hsv"])(primary);
+    hsv[1] = clamp(hsv[1] - 60, 0, 100);
+    hsv[2] = clamp(hsv[2] + 20, 90, 100);
+    return Object(_tw_color_utils__WEBPACK_IMPORTED_MODULE_5__["hsv2hex"])(hsv);
+  },
+  categoryIconBackground: primary => customExtensionColors.primary(primary),
+  categoryIconBorder: primary => customExtensionColors.tertiary(primary)
+};
+
+
+/***/ }),
+
 /***/ "./src/lib/themes/blocks/three.js":
 /*!****************************************!*\
   !*** ./src/lib/themes/blocks/three.js ***!
@@ -33980,6 +34241,115 @@ const blockColors = {
   gridColor: '#dddddd'
 };
 const extensions = {};
+
+
+/***/ }),
+
+/***/ "./src/lib/themes/blocks/ultradark.js":
+/*!********************************************!*\
+  !*** ./src/lib/themes/blocks/ultradark.js ***!
+  \********************************************/
+/*! exports provided: blockColors, extensions, customExtensionColors */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "blockColors", function() { return blockColors; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "extensions", function() { return extensions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "customExtensionColors", function() { return customExtensionColors; });
+/* harmony import */ var _tw_color_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../tw-color-utils */ "./src/lib/tw-color-utils.js");
+
+const blockColors = {
+  motion: {
+    primary: '#000000',
+    secondary: '#4C4C4C',
+    tertiary: '#4C97FF',
+    quaternary: '#4C97FF'
+  },
+  looks: {
+    primary: '#000000',
+    secondary: '#4C4C4C',
+    tertiary: '#9966FF',
+    quaternary: '#9966FF'
+  },
+  sounds: {
+    primary: '#000000',
+    secondary: '#4C4C4C',
+    tertiary: '#CF63CF',
+    quaternary: '#CF63CF'
+  },
+  control: {
+    primary: '#000000',
+    secondary: '#4C4C4C',
+    tertiary: '#FFAB19',
+    quaternary: '#FFAB19'
+  },
+  event: {
+    primary: '#000000',
+    secondary: '#4C4C4C',
+    tertiary: '#FFBF00',
+    quaternary: '#FFBF00'
+  },
+  sensing: {
+    primary: '#000000',
+    secondary: '#4C4C4C',
+    tertiary: '#5CB1D6',
+    quaternary: '#5CB1D6'
+  },
+  pen: {
+    primary: '#000000',
+    secondary: '#4C4C4C',
+    tertiary: '#0fBD8C',
+    quaternary: '#0fBD8C'
+  },
+  operators: {
+    primary: '#000000',
+    secondary: '#4C4C4C',
+    tertiary: '#59C059',
+    quaternary: '#59C059'
+  },
+  data: {
+    primary: '#000000',
+    secondary: '#4C4C4C',
+    tertiary: '#FF8C1A',
+    quaternary: '#FF8C1A'
+  },
+  data_lists: {
+    primary: '#000000',
+    secondary: '#4C4C4C',
+    tertiary: '#FF661A',
+    quaternary: '#FF661A'
+  },
+  more: {
+    primary: '#000000',
+    secondary: '#4C4C4C',
+    tertiary: '#FF6680',
+    quaternary: '#FF6680'
+  },
+  addons: {
+    primary: '#000000',
+    secondary: '#4C4C4C',
+    tertiary: '#34e4d0',
+    quaternary: '#34e4d0'
+  },
+  text: 'rgba(255, 255, 255, .7)',
+  textFieldText: '#E5E5E5',
+  textField: '#4C4C4C',
+  menuHover: 'rgba(255, 255, 255, 0.3)'
+};
+const extensions = {};
+const customExtensionColors = {
+  primary: _primary => {
+    const hsv = Object(_tw_color_utils__WEBPACK_IMPORTED_MODULE_0__["hex2hsv"])(_primary);
+    hsv[2] = Math.max(hsv[2] - 70, 20);
+    return Object(_tw_color_utils__WEBPACK_IMPORTED_MODULE_0__["hsv2hex"])(hsv);
+  },
+  secondary: () => '#4C4C4C',
+  tertiary: primary => primary,
+  quaternary: primary => primary,
+  categoryIconBackground: primary => customExtensionColors.primary(primary),
+  categoryIconBorder: primary => customExtensionColors.tertiary(primary)
+};
 
 
 /***/ }),
@@ -34188,6 +34558,7 @@ const guiColors = {
   /* lighter than motion-primary */
 
   'menu-bar-background': 'var(--looks-secondary)',
+  'menu-bar-background-image': 'none',
   'menu-bar-foreground': '#ffffff',
   'assets-background': '#ffffff',
   'input-background': '#ffffff',
@@ -34300,7 +34671,7 @@ const applyGuiColors = theme => {
 /*!*********************************!*\
   !*** ./src/lib/themes/index.js ***!
   \*********************************/
-/*! exports provided: Theme, defaultBlockColors, ACCENT_RED, ACCENT_PURPLE, ACCENT_BLUE, ACCENT_MAP, GUI_LIGHT, GUI_DARK, GUI_MAP, BLOCKS_THREE, BLOCKS_DARK, BLOCKS_CUSTOM, BLOCKS_MAP */
+/*! exports provided: Theme, defaultBlockColors, ACCENT_RED, ACCENT_PURPLE, ACCENT_BLUE, ACCENT_RAINBOW, ACCENT_MAP, GUI_LIGHT, GUI_DARK, GUI_MAP, BLOCKS_THREE, BLOCKS_HIGHCONTRAST, BLOCKS_DARK, BLOCKS_ULTRADARK, BLOCKS_CUSTOM, BLOCKS_MAP */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34310,12 +34681,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_RED", function() { return ACCENT_RED; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_PURPLE", function() { return ACCENT_PURPLE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_BLUE", function() { return ACCENT_BLUE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_RAINBOW", function() { return ACCENT_RAINBOW; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_MAP", function() { return ACCENT_MAP; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GUI_LIGHT", function() { return GUI_LIGHT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GUI_DARK", function() { return GUI_DARK; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GUI_MAP", function() { return GUI_MAP; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BLOCKS_THREE", function() { return BLOCKS_THREE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BLOCKS_HIGHCONTRAST", function() { return BLOCKS_HIGHCONTRAST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BLOCKS_DARK", function() { return BLOCKS_DARK; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BLOCKS_ULTRADARK", function() { return BLOCKS_ULTRADARK; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BLOCKS_CUSTOM", function() { return BLOCKS_CUSTOM; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BLOCKS_MAP", function() { return BLOCKS_MAP; });
 /* harmony import */ var lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash.defaultsdeep */ "./node_modules/lodash.defaultsdeep/index.js");
@@ -34323,10 +34697,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _accent_purple__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./accent/purple */ "./src/lib/themes/accent/purple.js");
 /* harmony import */ var _accent_blue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./accent/blue */ "./src/lib/themes/accent/blue.js");
 /* harmony import */ var _accent_red__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./accent/red */ "./src/lib/themes/accent/red.js");
-/* harmony import */ var _gui_light__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./gui/light */ "./src/lib/themes/gui/light.js");
-/* harmony import */ var _gui_dark__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./gui/dark */ "./src/lib/themes/gui/dark.js");
-/* harmony import */ var _blocks_three__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/three */ "./src/lib/themes/blocks/three.js");
-/* harmony import */ var _blocks_dark__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/dark */ "./src/lib/themes/blocks/dark.js");
+/* harmony import */ var _accent_rainbow__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./accent/rainbow */ "./src/lib/themes/accent/rainbow.js");
+/* harmony import */ var _gui_light__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./gui/light */ "./src/lib/themes/gui/light.js");
+/* harmony import */ var _gui_dark__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./gui/dark */ "./src/lib/themes/gui/dark.js");
+/* harmony import */ var _blocks_three__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/three */ "./src/lib/themes/blocks/three.js");
+/* harmony import */ var _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./blocks/high-contrast */ "./src/lib/themes/blocks/high-contrast.js");
+/* harmony import */ var _blocks_dark__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./blocks/dark */ "./src/lib/themes/blocks/dark.js");
+/* harmony import */ var _blocks_ultradark__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./blocks/ultradark */ "./src/lib/themes/blocks/ultradark.js");
 var _Theme;
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
@@ -34339,46 +34716,67 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
 
 
 
+
+
+
 const ACCENT_PURPLE = 'purple';
 const ACCENT_BLUE = 'blue';
 const ACCENT_RED = 'red';
+const ACCENT_RAINBOW = 'rainbow';
 const ACCENT_MAP = {
   [ACCENT_PURPLE]: _accent_purple__WEBPACK_IMPORTED_MODULE_1__,
   [ACCENT_BLUE]: _accent_blue__WEBPACK_IMPORTED_MODULE_2__,
-  [ACCENT_RED]: _accent_red__WEBPACK_IMPORTED_MODULE_3__
+  [ACCENT_RED]: _accent_red__WEBPACK_IMPORTED_MODULE_3__,
+  [ACCENT_RAINBOW]: _accent_rainbow__WEBPACK_IMPORTED_MODULE_4__
 };
 const ACCENT_DEFAULT = ACCENT_PURPLE;
 const GUI_LIGHT = 'light';
 const GUI_DARK = 'dark';
 const GUI_MAP = {
-  [GUI_LIGHT]: _gui_light__WEBPACK_IMPORTED_MODULE_4__,
-  [GUI_DARK]: _gui_dark__WEBPACK_IMPORTED_MODULE_5__
+  [GUI_LIGHT]: _gui_light__WEBPACK_IMPORTED_MODULE_5__,
+  [GUI_DARK]: _gui_dark__WEBPACK_IMPORTED_MODULE_6__
 };
 const GUI_DEFAULT = GUI_LIGHT;
 const BLOCKS_THREE = 'three';
+const BLOCKS_HIGHCONTRAST = 'highcontrast';
 const BLOCKS_DARK = 'dark';
+const BLOCKS_ULTRADARK = 'ultradark';
 const BLOCKS_CUSTOM = 'custom';
 const BLOCKS_DEFAULT = BLOCKS_THREE;
-const defaultBlockColors = _blocks_three__WEBPACK_IMPORTED_MODULE_6__["blockColors"];
+const defaultBlockColors = _blocks_three__WEBPACK_IMPORTED_MODULE_7__["blockColors"];
 const BLOCKS_MAP = {
   [BLOCKS_THREE]: {
     blocksMediaFolder: 'blocks-media/default',
-    colors: _blocks_three__WEBPACK_IMPORTED_MODULE_6__["blockColors"],
-    extensions: _blocks_three__WEBPACK_IMPORTED_MODULE_6__["extensions"],
+    colors: _blocks_three__WEBPACK_IMPORTED_MODULE_7__["blockColors"],
+    extensions: _blocks_three__WEBPACK_IMPORTED_MODULE_7__["extensions"],
+    customExtensionColors: {},
+    useForStage: true
+  },
+  [BLOCKS_HIGHCONTRAST]: {
+    blocksMediaFolder: 'blocks-media/default',
+    colors: _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_8__["blockColors"],
+    extensions: _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_8__["extensions"],
     customExtensionColors: {},
     useForStage: true
   },
   [BLOCKS_DARK]: {
     blocksMediaFolder: 'blocks-media/default',
-    colors: lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, _blocks_dark__WEBPACK_IMPORTED_MODULE_7__["blockColors"], defaultBlockColors),
-    extensions: _blocks_dark__WEBPACK_IMPORTED_MODULE_7__["extensions"],
-    customExtensionColors: _blocks_dark__WEBPACK_IMPORTED_MODULE_7__["customExtensionColors"],
+    colors: lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, _blocks_dark__WEBPACK_IMPORTED_MODULE_9__["blockColors"], defaultBlockColors),
+    extensions: _blocks_dark__WEBPACK_IMPORTED_MODULE_9__["extensions"],
+    customExtensionColors: _blocks_dark__WEBPACK_IMPORTED_MODULE_9__["customExtensionColors"],
+    useForStage: false
+  },
+  [BLOCKS_ULTRADARK]: {
+    blocksMediaFolder: 'blocks-media/default',
+    colors: lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, _blocks_ultradark__WEBPACK_IMPORTED_MODULE_10__["blockColors"], defaultBlockColors),
+    extensions: _blocks_ultradark__WEBPACK_IMPORTED_MODULE_10__["extensions"],
+    customExtensionColors: _blocks_ultradark__WEBPACK_IMPORTED_MODULE_10__["customExtensionColors"],
     useForStage: false
   },
   [BLOCKS_CUSTOM]: {
     // to be filled by editor-theme3 addon
     blocksMediaFolder: 'blocks-media/default',
-    colors: _blocks_three__WEBPACK_IMPORTED_MODULE_6__["blockColors"],
+    colors: _blocks_three__WEBPACK_IMPORTED_MODULE_7__["blockColors"],
     extensions: {},
     customExtensionColors: {},
     useForStage: false
@@ -34411,7 +34809,7 @@ class Theme {
     return BLOCKS_MAP[this.blocks].blocksMediaFolder;
   }
   getGuiColors() {
-    return lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, ACCENT_MAP[this.accent].guiColors, GUI_MAP[this.gui].guiColors, _gui_light__WEBPACK_IMPORTED_MODULE_4__["guiColors"]);
+    return lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, ACCENT_MAP[this.accent].guiColors, GUI_MAP[this.gui].guiColors, _gui_light__WEBPACK_IMPORTED_MODULE_5__["guiColors"]);
   }
   getBlockColors() {
     return lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, ACCENT_MAP[this.accent].blockColors, GUI_MAP[this.gui].blockColors, BLOCKS_MAP[this.blocks].colors);

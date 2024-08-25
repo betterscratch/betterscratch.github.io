@@ -192,6 +192,9 @@ const compensateForTimePassedWhilePaused = (thread, pauseState) => {
   if (thread.timer) {
     thread.timer.startTime += vm.runtime.currentMSecs - pauseState.time;
   }
+  if (thread.compatibilityStackFrame && thread.compatibilityStackFrame.timer) {
+    thread.compatibilityStackFrame.timer.startTime += vm.runtime.currentMSecs - pauseState.time;
+  }
   const stackFrame = thread.peekStackFrame();
   if (stackFrame && stackFrame.executionContext && stackFrame.executionContext.timer) {
     stackFrame.executionContext.timer.startTime += vm.runtime.currentMSecs - pauseState.time;
@@ -1448,9 +1451,20 @@ const getEditorMode = () => {
   if (mode.isPlayerOnly) return 'projectpage';
   return 'editor';
 };
-const language = _redux__WEBPACK_IMPORTED_MODULE_14__["default"].state.locales.locale.split('-')[0];
+
+/**
+ * @returns {string} Locale code
+ */
+const getLocale = () => {
+  const locale = _redux__WEBPACK_IMPORTED_MODULE_14__["default"].state.locales.locale;
+  if (Object.prototype.hasOwnProperty.call(_generated_l10n_entries__WEBPACK_IMPORTED_MODULE_7__["default"], locale)) {
+    return locale;
+  }
+  return locale.split('-')[0];
+};
+const language = getLocale();
 const getTranslations = async () => {
-  if (_generated_l10n_entries__WEBPACK_IMPORTED_MODULE_7__["default"][language]) {
+  if (Object.prototype.hasOwnProperty.call(_generated_l10n_entries__WEBPACK_IMPORTED_MODULE_7__["default"], language)) {
     const localeMessages = await _generated_l10n_entries__WEBPACK_IMPORTED_MODULE_7__["default"][language]();
     Object.assign(_addons_l10n_en_json__WEBPACK_IMPORTED_MODULE_6__, localeMessages);
   }
@@ -2634,6 +2648,7 @@ __webpack_require__.r(__webpack_exports__);
   "ru": () => __webpack_require__.e(/*! import() | addon-l10n-ru */ "addon-l10n-ru").then(__webpack_require__.t.bind(null, /*! ../addons-l10n/ru.json */ "./src/addons/addons-l10n/ru.json", 3)),
   "sl": () => __webpack_require__.e(/*! import() | addon-l10n-sl */ "addon-l10n-sl").then(__webpack_require__.t.bind(null, /*! ../addons-l10n/sl.json */ "./src/addons/addons-l10n/sl.json", 3)),
   "tr": () => __webpack_require__.e(/*! import() | addon-l10n-tr */ "addon-l10n-tr").then(__webpack_require__.t.bind(null, /*! ../addons-l10n/tr.json */ "./src/addons/addons-l10n/tr.json", 3)),
+  "zh-cn": () => __webpack_require__.e(/*! import() | addon-l10n-zh-cn */ "addon-l10n-zh-cn").then(__webpack_require__.t.bind(null, /*! ../addons-l10n/zh-cn.json */ "./src/addons/addons-l10n/zh-cn.json", 3)),
   "zh-tw": () => __webpack_require__.e(/*! import() | addon-l10n-zh-tw */ "addon-l10n-zh-tw").then(__webpack_require__.t.bind(null, /*! ../addons-l10n/zh-tw.json */ "./src/addons/addons-l10n/zh-tw.json", 3))
 });
 

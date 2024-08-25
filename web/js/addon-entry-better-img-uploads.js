@@ -167,21 +167,31 @@ __webpack_require__.r(__webpack_exports__);
         processed.push(file);
         continue;
       }
-      let blob = await new Promise(resolve => {
-        //Get the Blob data url for the image so that we can add it to the svg
-        let reader = new FileReader();
-        reader.addEventListener("load", () => resolve(reader.result));
-        reader.readAsDataURL(file);
-      });
-      let i = new Image(); //New image to get the image's size
-      i.src = blob;
-      await new Promise(resolve => {
-        i.onload = resolve;
-      });
-      let dim = {
-        width: i.width,
-        height: i.height
+      const getImgData = async () => {
+        const img = new Image();
+        img.src = URL.createObjectURL(file);
+        await new Promise(resolve => {
+          img.onload = resolve;
+        });
+        return img;
       };
+      const img = await getImgData();
+      let dim = {
+        width: img.width,
+        height: img.height
+      };
+
+      // NOTE: we DON'T want to use the uploaded file directly.
+      // We redraw the image into a canvas first, so that:
+      // 1. We always embed a PNG file,
+      // 2. EXIF metadata (such as location, if applicable) is discarded.
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d");
+      canvas.width = dim.width;
+      canvas.height = dim.height;
+      ctx.drawImage(img, 0, 0);
+      URL.revokeObjectURL(img.src);
+      const dataURL = canvas.toDataURL();
       const originalDim = JSON.parse(JSON.stringify(dim));
       if (mode === "fit") {
         //Make sure the image fits completely in the stage
@@ -246,7 +256,7 @@ __webpack_require__.r(__webpack_exports__);
       }
       processed.push(new File(
       //Create the svg file
-      ["<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewbox=\"0,0,".concat(dim.width, ",").concat(dim.height, "\" width=\"").concat(dim.width, "\" height=\"").concat(dim.height, "\">\n        <g>\n          <g\n              data-paper-data='{\"isPaintingLayer\":true}'\n              fill=\"none\"\n              fill-rule=\"nonzero\"\n              stroke=\"none\"\n              stroke-width=\"0.5\"\n              stroke-linecap=\"butt\"\n              stroke-linejoin=\"miter\"\n              stroke-miterlimit=\"10\"\n              stroke-dasharray=\"\"\n              stroke-dashoffset=\"0\"\n              style=\"mix-blend-mode: normal;\"\n          >\n            <image\n                width=\"").concat(originalDim.width, "\"\n                height=\"").concat(originalDim.height, "\"\n\t\t\t\ttransform=\"scale(").concat(dim.width / originalDim.width, ",").concat(dim.height / originalDim.height, ")\"\n                xlink:href=\"").concat(blob, "\"\n            />\n          </g>\n        </g>\n      </svg>")], "".concat(file.name.replace(/(.*)\..*/, "$1"), ".svg"), {
+      ["<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewbox=\"0,0,".concat(dim.width, ",").concat(dim.height, "\" width=\"").concat(dim.width, "\" height=\"").concat(dim.height, "\">\n        <g>\n          <g\n              data-paper-data='{\"isPaintingLayer\":true}'\n              fill=\"none\"\n              fill-rule=\"nonzero\"\n              stroke=\"none\"\n              stroke-width=\"0.5\"\n              stroke-linecap=\"butt\"\n              stroke-linejoin=\"miter\"\n              stroke-miterlimit=\"10\"\n              stroke-dasharray=\"\"\n              stroke-dashoffset=\"0\"\n              style=\"mix-blend-mode: normal;\"\n          >\n            <image\n                width=\"").concat(originalDim.width, "\"\n                height=\"").concat(originalDim.height, "\"\n\t\t\t\ttransform=\"scale(").concat(dim.width / originalDim.width, ",").concat(dim.height / originalDim.height, ")\"\n                xlink:href=\"").concat(dataURL, "\"\n            />\n          </g>\n        </g>\n      </svg>")], "".concat(file.name.replace(/(.*)\..*/, "$1"), ".svg"), {
         type: "image/svg+xml"
       }));
     }
